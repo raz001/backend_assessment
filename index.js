@@ -12,11 +12,11 @@ app.use(express.json());
 app.use("/user", userRouter)
 app.use("/employees", employeeRouter);
 
-app.listen(process.env.port, async () => {
+app.listen(process.env.PORT, async () => {
  try {
     await connection
     console.log('connected to db');
-    console.log(`server is runing at port ${process.env.port}`)
+    console.log(`server is runing at port ${process.env.PORT}`)
  } catch (error) {
     console.log(error)
  }
